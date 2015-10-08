@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h1= title
+  div#form
+    p Thanks for your interest! Please leave your basic contact info below, and we'll get back to you.
+    br
+    br
+    form(name="register-client", method="post")
+      div.input
+        span.label First Name
+        br
+        div(class="input-error hider", id="error-first-name")
+          p This field is invalid
+        input(class="form-control", type="text", name="first-name", id="form-first-name")
+        br
+      div.input
+        span.label Last Name
+        br
+        div(class="input-error hider", id="error-last-name")
+          p This field is invalid
+        input(class="form-control", type="text", name="last-name", id="form-last-name")
+        br
+      div.input
+        span.label Phone Number
+        br
+        div(class="input-error hider", id="error-phone-number")
+          p This field is invalid
+        input(class="form-control", type="text", name="phone-number", id="form-phone-number")
+        br
+      div.input
+        span.label Email
+        br
+        div(class="input-error hider", id="error-email")
+          p This field is invalid
+        input(class="form-control", type="text", name="email", id="form-email")
+        br
+      div(class="actions text-center")
+        br
+        input(class="btn btn-success btn-large", type="submit", value="add", id="submit-client")
+  div(class="hider" id="success")
+    h2 Very nice, great success!, we'll get back to you soon.

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Below is a list of all clients that have registered.
+
+  div
+  br
+  table(class="table")
+    tbody
+    each client, i in clients
+      tr
+        th #{client.first_name}
+        th #{client.last_name}
+        th #{client.phone_number}
+        th #{client.email}
